@@ -52,9 +52,21 @@ class Solution_1:
             print(f" Value of iteration: {nums[i]}")
             print(f"{d}")
 
+    def twoSum_self(self, nums: list[int], target: int) -> list[int]:
+        logger_instance.info(f"Function twoSum_self Called")
+        logger_instance.info(f"Input Numbers: {nums}, Target: {target}")
+        a = []
+        for i in range(len(nums)):
+            for j in range(i+1,len(nums)):
+                if (nums[i]+nums[j]) == target:
+                    print("This is Result: ")
+                    print([nums[i],nums[j]])
+                    break
+                else:
+                    continue
 
-
+    
 result = Solution_1()
 # result.twoSum_brute(nums=[2, 7, 11,9], target=9)
-result.twoSum_mem(nums=[3,2,4],target=6)
+result.twoSum_self(nums=[3,2,4],target=6)
 
