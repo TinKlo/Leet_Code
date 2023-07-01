@@ -1,17 +1,12 @@
 import sys
 import os
 
-# Get the current directory of main_script.py
-current_dir = os.path.dirname(os.path.abspath(__file__))
-
-# Add the 'lib' directory to sys.path
-lib_dir = os.path.join(current_dir, '..', 'lib')
+lib_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'lib')
 sys.path.append(lib_dir)
 
-# Now you can import the module
-import logger
+from my_logger import setup_logger
 
-logger_instance = logger.setup_logger()
+logger_instance = setup_logger()
 
 class Palindrome:
     def __init__(self):
