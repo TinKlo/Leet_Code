@@ -64,7 +64,7 @@ class Solution_1:
                     break
                 else:
                     continue
-
+    def twoSum_self(self, nums: list[int], target: int) -> list[int]:
     
 result = Solution_1()
 # result.twoSum_brute(nums=[2, 7, 11,9], target=9)
