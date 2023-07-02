@@ -1,7 +1,12 @@
-import logger
-from tqdm import tqdm
+import sys
+import os
 
-logger_instance = logger.setup_logger()
+lib_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'lib')
+sys.path.append(lib_dir)
+
+from my_logger import setup_logger
+
+logger_instance = setup_logger()
 
 
 class Solution_1:
@@ -64,7 +69,7 @@ class Solution_1:
                     break
                 else:
                     continue
-
+    # def twoSum_self(self, nums: list[int], target: int) -> list[int]:
     
 result = Solution_1()
 # result.twoSum_brute(nums=[2, 7, 11,9], target=9)
